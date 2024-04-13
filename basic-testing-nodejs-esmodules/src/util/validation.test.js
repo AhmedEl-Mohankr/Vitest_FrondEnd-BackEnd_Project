@@ -4,8 +4,8 @@ import { validateNumber, validateStringNotEmpty } from "./validation";
 
 describe("validateStringNotEmpty", () => {
   it("should throw an error, if an empty string is provided", () => {
-    const input = ""; // empty string
-    const validationFn = () => validateStringNotEmpty(input); //a validation function that stores the validation check on input
+    const input = ""; 
+    const validationFn = () => validateStringNotEmpty(input);
     expect(validationFn).toThrow();
   });
 
@@ -55,7 +55,7 @@ describe("validateNumber", () => {
     expect(validationFn).toThrow(/Invalid number/);
   });
 
-  // This test fail. Unless you adjust the validate number function to be if (isNaN(number) || typeof number !== "number)
+  
   it("should throw an error if a non-numeric value is provided", () => {
     const input = "1";
     const validationFn = () => validateNumber(input);
@@ -69,13 +69,3 @@ describe("validateNumber", () => {
   });
 });
 
-/*
-Test suite using descripe('')
-----------------------------------------------------------------------
-desribe()> takes 2 arguments {function name as a string with (), and the second argument will be anonymous function.
-
-describe('validateNumber()', () => {
-    
-Write your test cases here.
-
-*/
